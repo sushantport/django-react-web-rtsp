@@ -7,9 +7,11 @@ app.config['SECERET_KEY']="mykey"
 socketio =SocketIO(app,cors_allowed_origins="*")
 
 
-@socketio.on ('triget_even')
+@socketio.on ('message')
 def handleMessage(msg):
+    'Any message event occur then this return to all its broadcast client'
     print('Message',msg)
+    print("\n")
     send(msg,broadcast=True)
 
 
