@@ -31,6 +31,7 @@ ASGI_APPLICATION = 'webrtctut.routing.application'
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rtspstream',
-    'channels'
+    
 ]
 
 MIDDLEWARE = [
@@ -79,6 +80,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'webrtctut.wsgi.application'
 
+ASGI_APPLICATION = 'webrtctut.routing.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
